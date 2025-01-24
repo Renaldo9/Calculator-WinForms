@@ -70,9 +70,9 @@
             // 
             lblAnswer.Anchor = AnchorStyles.Right;
             lblAnswer.Font = new Font("Segoe UI", 23F);
-            lblAnswer.Location = new Point(22, 45);
+            lblAnswer.Location = new Point(3, 45);
             lblAnswer.Name = "lblAnswer";
-            lblAnswer.Size = new Size(302, 42);
+            lblAnswer.Size = new Size(321, 42);
             lblAnswer.TabIndex = 0;
             lblAnswer.Text = "0";
             lblAnswer.TextAlign = ContentAlignment.MiddleRight;
