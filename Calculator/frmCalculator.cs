@@ -347,5 +347,13 @@ namespace Calculator
         {
             AddSign("/");
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            inputNum = "";
+            lblAnswer.Text = "0";
+            signs.Clear();
+            answerList.Clear();
+        }
     }
 }
