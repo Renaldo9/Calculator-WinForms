@@ -153,6 +153,7 @@
             btnFraction.TabIndex = 8;
             btnFraction.Text = "1/x";
             btnFraction.UseVisualStyleBackColor = true;
+            btnFraction.Click += btnFraction_Click;
             // 
             // btnMultiply
             // 
