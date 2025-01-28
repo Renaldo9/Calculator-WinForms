@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             pnlNumbers = new Panel();
+            btnKeepOnTop = new Button();
             lblAnswer = new Label();
             btnRemove = new Button();
             btnCancel = new Button();
@@ -60,11 +61,25 @@
             // pnlNumbers
             // 
             pnlNumbers.BackColor = SystemColors.ControlLight;
+            pnlNumbers.Controls.Add(btnKeepOnTop);
             pnlNumbers.Controls.Add(lblAnswer);
             pnlNumbers.Location = new Point(12, 12);
             pnlNumbers.Name = "pnlNumbers";
             pnlNumbers.Size = new Size(327, 99);
             pnlNumbers.TabIndex = 0;
+            // 
+            // btnKeepOnTop
+            // 
+            btnKeepOnTop.FlatAppearance.BorderSize = 0;
+            btnKeepOnTop.FlatStyle = FlatStyle.Flat;
+            btnKeepOnTop.ForeColor = SystemColors.ControlDarkDark;
+            btnKeepOnTop.Location = new Point(241, 0);
+            btnKeepOnTop.Name = "btnKeepOnTop";
+            btnKeepOnTop.Size = new Size(86, 24);
+            btnKeepOnTop.TabIndex = 25;
+            btnKeepOnTop.Text = "Keep On Top";
+            btnKeepOnTop.UseVisualStyleBackColor = true;
+            btnKeepOnTop.Click += btnKeepOnTop_Click;
             // 
             // lblAnswer
             // 
@@ -351,7 +366,6 @@
             KeyPreview = true;
             Name = "frmCalculator";
             Text = "Calculator";
-            //KeyDown += frmCalculator_KeyDown;
             pnlNumbers.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -384,5 +398,6 @@
         private Button btnZero;
         private Button btnDecimal;
         private Label lblAnswer;
+        private Button btnKeepOnTop;
     }
 }

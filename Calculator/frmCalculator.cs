@@ -346,5 +346,22 @@ namespace Calculator
             inputNum = num.ToString();
             lblAnswer.Text = inputNum;
         }
+
+        private void btnKeepOnTop_Click(object sender, EventArgs e)
+        {
+            if (this.TopMost == false)
+            {
+                this.TopMost = true;
+                btnKeepOnTop.ForeColor = Color.Black;
+                btnKeepOnTop.Text = "Remove From Top";
+            }
+            else 
+            {
+                this.TopMost = false;
+                btnKeepOnTop.ForeColor = SystemColors.ControlDarkDark;
+                btnKeepOnTop.Text = "Keep On Top";
+            }
+            
+        }
     }
 }
