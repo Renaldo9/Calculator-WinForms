@@ -196,53 +196,6 @@ namespace Calculator
         }
 
 
-        //Keyboard buttons
-        private void frmCalculator_KeyDown(object sender, KeyEventArgs e)
-        {
-            ProcessKeyPress(e.KeyCode);
-        }
-
-        void ProcessKeyPress(Keys keyPressed)
-        {
-            switch (keyPressed)
-            {
-                case Keys.D0:
-
-                    break;
-                case Keys.D1:
-
-                    break;
-                case Keys.D2:
-
-                    break;
-                case Keys.D3:
-
-                    break;
-                case Keys.D4:
-
-                    break;
-                case Keys.D5:
-
-                    break;
-                case Keys.D6:
-
-                    break;
-                case Keys.D7:
-
-                    break;
-                case Keys.D8:
-
-                    break;
-                case Keys.D9:
-
-                    break;
-                default:
-                    Console.WriteLine("Not a number key");
-                    break;
-            }
-        }
-
-
         //Calculations
         private void AddSign(string sign)
         {
