@@ -361,5 +361,13 @@ namespace Calculator
             inputNum = "";
             lblAnswer.Text = "0";
         }
+
+        private void btnPercent_Click(object sender, EventArgs e)
+        {
+            float num = float.Parse(inputNum);
+            num = num / 100;
+            inputNum = num.ToString();
+            lblAnswer.Text = inputNum;
+        }
     }
 }

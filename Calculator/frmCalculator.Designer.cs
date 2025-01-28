@@ -115,6 +115,7 @@
             btnPercent.TabIndex = 4;
             btnPercent.Text = "%";
             btnPercent.UseVisualStyleBackColor = true;
+            btnPercent.Click += btnPercent_Click;
             // 
             // btnDivide
             // 
