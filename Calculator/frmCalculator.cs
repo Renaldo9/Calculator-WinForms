@@ -381,7 +381,15 @@ namespace Calculator
         private void btnSquared_Click(object sender, EventArgs e)
         {
             float num = float.Parse(inputNum);
-            num =  num*num;
+            num = num * num;
+            inputNum = num.ToString();
+            lblAnswer.Text = inputNum;
+        }
+
+        private void btnSquareRoot_Click(object sender, EventArgs e)
+        {
+            float num = float.Parse(inputNum);
+            num = (float)Math.Sqrt(num);
             inputNum = num.ToString();
             lblAnswer.Text = inputNum;
         }

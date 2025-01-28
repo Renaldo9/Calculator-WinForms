@@ -135,6 +135,7 @@
             btnSquareRoot.TabIndex = 6;
             btnSquareRoot.Text = "√x";
             btnSquareRoot.UseVisualStyleBackColor = true;
+            btnSquareRoot.Click += btnSquareRoot_Click;
             // 
             // btnSquared
             // 
