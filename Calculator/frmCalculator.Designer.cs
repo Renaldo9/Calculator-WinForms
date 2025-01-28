@@ -351,7 +351,7 @@
             KeyPreview = true;
             Name = "frmCalculator";
             Text = "Calculator";
-            KeyDown += frmCalculator_KeyDown;
+            //KeyDown += frmCalculator_KeyDown;
             pnlNumbers.ResumeLayout(false);
             ResumeLayout(false);
         }
