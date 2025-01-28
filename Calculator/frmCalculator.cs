@@ -161,12 +161,12 @@ namespace Calculator
         {
             if (inputNum.Length == 0 || inputNum == "0")
             {
-                inputNum = "0.";
+                inputNum = "0,";
                 showInput();
             }
-            else if (!inputNum.Contains('.') && inputNum.Length < 12)
+            else if (!inputNum.Contains(',') && inputNum.Length < 12)
             {
-                inputNum += ".";
+                inputNum += ",";
                 showInput();
             }
 
