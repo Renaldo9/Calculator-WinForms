@@ -144,6 +144,7 @@
             btnSquared.TabIndex = 7;
             btnSquared.Text = "x²";
             btnSquared.UseVisualStyleBackColor = true;
+            btnSquared.Click += btnSquared_Click;
             // 
             // btnFraction
             // 

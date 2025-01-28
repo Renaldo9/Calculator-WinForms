@@ -377,5 +377,13 @@ namespace Calculator
             inputNum = num.ToString();
             lblAnswer.Text = inputNum;
         }
+
+        private void btnSquared_Click(object sender, EventArgs e)
+        {
+            float num = float.Parse(inputNum);
+            num =  num*num;
+            inputNum = num.ToString();
+            lblAnswer.Text = inputNum;
+        }
     }
 }
