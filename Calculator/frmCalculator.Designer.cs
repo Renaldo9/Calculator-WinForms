@@ -105,6 +105,7 @@
             btnCancelEntry.TabIndex = 3;
             btnCancelEntry.Text = "CE";
             btnCancelEntry.UseVisualStyleBackColor = true;
+            btnCancelEntry.Click += btnCancelEntry_Click;
             // 
             // btnPercent
             // 

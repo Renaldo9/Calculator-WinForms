@@ -355,5 +355,11 @@ namespace Calculator
             signs.Clear();
             answerList.Clear();
         }
+
+        private void btnCancelEntry_Click(object sender, EventArgs e)
+        {
+            inputNum = "";
+            lblAnswer.Text = "0";
+        }
     }
 }
