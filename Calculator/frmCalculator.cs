@@ -7,12 +7,17 @@ namespace Calculator
             InitializeComponent();
         }
 
-        float num1;
-        float num2;
+        float num1 = 0;
+        float num2 = 0;
+        float finalAnswer = 0;
+        List<float> answerList = new List<float>();
+        List<string> signs = new List<string>();
         string inputNum = "";
 
         public void showInput()
         {
+
+            //change so that it loops from the end of the string to the front to resolve issues
             string displayInput = "";
             bool decimalFound = false;
             for (int i = 0; i < inputNum.Length; i++)
@@ -202,39 +207,145 @@ namespace Calculator
             switch (keyPressed)
             {
                 case Keys.D0:
-                   
+
                     break;
                 case Keys.D1:
-                    
+
                     break;
                 case Keys.D2:
-                    
+
                     break;
                 case Keys.D3:
-                    
+
                     break;
                 case Keys.D4:
-                    
+
                     break;
                 case Keys.D5:
-                    
+
                     break;
                 case Keys.D6:
-                    
+
                     break;
                 case Keys.D7:
-                    
+
                     break;
                 case Keys.D8:
-                    
+
                     break;
                 case Keys.D9:
-                    
+
                     break;
                 default:
                     Console.WriteLine("Not a number key");
                     break;
             }
+        }
+
+
+        //Calculations
+        private void AddSign(string sign)
+        {
+            // Save the current number to the list
+            if (!string.IsNullOrEmpty(inputNum))
+            {
+                float number = float.Parse(inputNum);
+                answerList.Add(number);
+            }
+
+            // Save the operator to the list
+            signs.Add(sign);
+
+            // Clear the inputNum for the next number
+            inputNum = "";
+
+            // Display the operator temporarily in lblAnswer
+            lblAnswer.Text = sign;
+        }
+
+
+        private void btnPlus_Click(object sender, EventArgs e)
+        {
+            AddSign("+");
+        }
+
+        private void btnEquals_Click(object sender, EventArgs e)
+        {
+            // Add the last number to the list
+            if (!string.IsNullOrEmpty(inputNum))
+            {
+                float number = float.Parse(inputNum);
+                answerList.Add(number);
+            }
+
+            // Perform the calculation
+            if (answerList.Count > 0 && signs.Count > 0)
+            {
+                finalAnswer = answerList[0]; // Start with the first number
+
+                for (int i = 0; i < signs.Count; i++)
+                {
+                    // Get the next number and the operator
+                    float nextNumber = answerList[i + 1];
+                    string sign = signs[i];
+
+                    // Perform the operation
+                    switch (sign)
+                    {
+                        case "+":
+                            finalAnswer += nextNumber;
+                            break;
+                        case "-":
+                            finalAnswer -= nextNumber;
+                            break;
+                        case "*":
+                            finalAnswer *= nextNumber;
+                            break;
+                        case "/":
+                            if (nextNumber != 0)
+                            {
+                                finalAnswer /= nextNumber;
+                            }
+                            else
+                            {
+                                // Handle division by zero gracefully
+                                lblAnswer.Text = "Error: Division by 0";
+
+                                // Reset the calculator state
+                                answerList.Clear();
+                                signs.Clear();
+                                inputNum = "";
+
+                                return; // Exit the equals function
+                            }
+                            break;
+                    }
+                }
+
+                // Display the result
+                lblAnswer.Text = finalAnswer.ToString();
+
+                // Clear lists for next calculation
+                answerList.Clear();
+                signs.Clear();
+                inputNum = finalAnswer.ToString(); // Allow chaining calculations
+            }
+
+        }
+
+        private void btnMinus_Click(object sender, EventArgs e)
+        {
+            AddSign("-");
+        }
+
+        private void btnMultiply_Click(object sender, EventArgs e)
+        {
+            AddSign("*");
+        }
+
+        private void btnDivide_Click(object sender, EventArgs e)
+        {
+            AddSign("/");
         }
     }
 }
