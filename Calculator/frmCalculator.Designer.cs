@@ -85,6 +85,7 @@
             btnRemove.TabIndex = 1;
             btnRemove.Text = "<---";
             btnRemove.UseVisualStyleBackColor = true;
+            btnRemove.Click += btnRemove_Click;
             // 
             // btnCancel
             // 
@@ -94,6 +95,7 @@
             btnCancel.TabIndex = 2;
             btnCancel.Text = "C";
             btnCancel.UseVisualStyleBackColor = true;
+            btnCancel.Click += btnCancel_Click;
             // 
             // btnCancelEntry
             // 
@@ -103,6 +105,7 @@
             btnCancelEntry.TabIndex = 3;
             btnCancelEntry.Text = "CE";
             btnCancelEntry.UseVisualStyleBackColor = true;
+            btnCancelEntry.Click += btnCancelEntry_Click;
             // 
             // btnPercent
             // 
@@ -112,6 +115,7 @@
             btnPercent.TabIndex = 4;
             btnPercent.Text = "%";
             btnPercent.UseVisualStyleBackColor = true;
+            btnPercent.Click += btnPercent_Click;
             // 
             // btnDivide
             // 
@@ -121,6 +125,7 @@
             btnDivide.TabIndex = 5;
             btnDivide.Text = "÷";
             btnDivide.UseVisualStyleBackColor = true;
+            btnDivide.Click += btnDivide_Click;
             // 
             // btnSquareRoot
             // 
@@ -130,6 +135,7 @@
             btnSquareRoot.TabIndex = 6;
             btnSquareRoot.Text = "√x";
             btnSquareRoot.UseVisualStyleBackColor = true;
+            btnSquareRoot.Click += btnSquareRoot_Click;
             // 
             // btnSquared
             // 
@@ -139,6 +145,7 @@
             btnSquared.TabIndex = 7;
             btnSquared.Text = "x²";
             btnSquared.UseVisualStyleBackColor = true;
+            btnSquared.Click += btnSquared_Click;
             // 
             // btnFraction
             // 
@@ -148,6 +155,7 @@
             btnFraction.TabIndex = 8;
             btnFraction.Text = "1/x";
             btnFraction.UseVisualStyleBackColor = true;
+            btnFraction.Click += btnFraction_Click;
             // 
             // btnMultiply
             // 
@@ -157,6 +165,7 @@
             btnMultiply.TabIndex = 9;
             btnMultiply.Text = "x";
             btnMultiply.UseVisualStyleBackColor = true;
+            btnMultiply.Click += btnMultiply_Click;
             // 
             // btnNine
             // 
@@ -166,6 +175,7 @@
             btnNine.TabIndex = 10;
             btnNine.Text = "9";
             btnNine.UseVisualStyleBackColor = true;
+            btnNine.Click += btnNine_Click;
             // 
             // btnEight
             // 
@@ -175,6 +185,7 @@
             btnEight.TabIndex = 11;
             btnEight.Text = "8";
             btnEight.UseVisualStyleBackColor = true;
+            btnEight.Click += btnEight_Click;
             // 
             // btnSeven
             // 
@@ -184,6 +195,7 @@
             btnSeven.TabIndex = 12;
             btnSeven.Text = "7";
             btnSeven.UseVisualStyleBackColor = true;
+            btnSeven.Click += btnSeven_Click;
             // 
             // btnMinus
             // 
@@ -193,6 +205,7 @@
             btnMinus.TabIndex = 13;
             btnMinus.Text = "-";
             btnMinus.UseVisualStyleBackColor = true;
+            btnMinus.Click += btnMinus_Click;
             // 
             // btnPlus
             // 
@@ -202,6 +215,7 @@
             btnPlus.TabIndex = 14;
             btnPlus.Text = "+";
             btnPlus.UseVisualStyleBackColor = true;
+            btnPlus.Click += btnPlus_Click;
             // 
             // btnEquals
             // 
@@ -211,6 +225,7 @@
             btnEquals.TabIndex = 15;
             btnEquals.Text = "=";
             btnEquals.UseVisualStyleBackColor = true;
+            btnEquals.Click += btnEquals_Click;
             // 
             // btnFour
             // 
@@ -220,6 +235,7 @@
             btnFour.TabIndex = 18;
             btnFour.Text = "4";
             btnFour.UseVisualStyleBackColor = true;
+            btnFour.Click += btnFour_Click;
             // 
             // btnFive
             // 
@@ -229,6 +245,7 @@
             btnFive.TabIndex = 17;
             btnFive.Text = "5";
             btnFive.UseVisualStyleBackColor = true;
+            btnFive.Click += btnFive_Click;
             // 
             // btnSix
             // 
@@ -238,6 +255,7 @@
             btnSix.TabIndex = 16;
             btnSix.Text = "6";
             btnSix.UseVisualStyleBackColor = true;
+            btnSix.Click += btnSix_Click;
             // 
             // btnOne
             // 
@@ -247,6 +265,7 @@
             btnOne.TabIndex = 21;
             btnOne.Text = "1";
             btnOne.UseVisualStyleBackColor = true;
+            btnOne.Click += btnOne_Click;
             // 
             // btnTwo
             // 
@@ -256,6 +275,7 @@
             btnTwo.TabIndex = 20;
             btnTwo.Text = "2";
             btnTwo.UseVisualStyleBackColor = true;
+            btnTwo.Click += btnTwo_Click;
             // 
             // btnThree
             // 
@@ -265,6 +285,7 @@
             btnThree.TabIndex = 19;
             btnThree.Text = "3";
             btnThree.UseVisualStyleBackColor = true;
+            btnThree.Click += btnThree_Click;
             // 
             // btnSignChange
             // 
@@ -274,6 +295,7 @@
             btnSignChange.TabIndex = 24;
             btnSignChange.Text = "+/-";
             btnSignChange.UseVisualStyleBackColor = true;
+            btnSignChange.Click += btnSignChange_Click;
             // 
             // btnZero
             // 
@@ -283,6 +305,7 @@
             btnZero.TabIndex = 23;
             btnZero.Text = "0";
             btnZero.UseVisualStyleBackColor = true;
+            btnZero.Click += btnZero_Click;
             // 
             // btnDecimal
             // 
@@ -292,6 +315,7 @@
             btnDecimal.TabIndex = 22;
             btnDecimal.Text = ",";
             btnDecimal.UseVisualStyleBackColor = true;
+            btnDecimal.Click += btnDecimal_Click;
             // 
             // frmCalculator
             // 
@@ -324,8 +348,10 @@
             Controls.Add(btnRemove);
             Controls.Add(pnlNumbers);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            KeyPreview = true;
             Name = "frmCalculator";
             Text = "Calculator";
+            KeyDown += frmCalculator_KeyDown;
             pnlNumbers.ResumeLayout(false);
             ResumeLayout(false);
         }
